@@ -19,7 +19,7 @@ public class Stable {
     private Technician technician;
 
 
-    public Stable(final int id, final String address, final double surface, final Technician technician, final List<Ventilator> ventilators, final List<Cage> cages) {
+    public Stable(final int id, final String address, final double surface, final Technician technician) {
         this.id = id;
         this.addressOfStable = address;
         this.surface = surface;
