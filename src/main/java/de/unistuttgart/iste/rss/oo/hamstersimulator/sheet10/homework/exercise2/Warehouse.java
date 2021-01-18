@@ -47,9 +47,9 @@ public final class Warehouse {
 		return Optional.empty();
 	}
 	
-	public int getCompartmentNumberOf(final ItemIdentification identification) {
+	public Optional<Integer> getCompartmentNumberOf(final ItemIdentification identification) {
 		//TODO: Exercise 2d
-		return 0;
+		return Optional.empty();
 	}
 	
 	/*@
