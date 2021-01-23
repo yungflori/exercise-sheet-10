@@ -33,8 +33,8 @@ public final class Warehouse {
 	}
 	
 	public void addItem(final Item item) {
-		numberOfItems++;
 		//TODO: Exercises 2b and 2d
+		numberOfItems++;
 	}
 	
 	public void removeItem(final int compartmentNumber) {
