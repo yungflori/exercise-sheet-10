@@ -38,8 +38,8 @@ public final class Warehouse {
 	}
 	
 	public void removeItem(final int compartmentNumber) {
-		numberOfItems--;
 		//TODO: Exercises 2b and 2d
+		numberOfItems--;
 	}
 	
 	public Optional<Item> getItem(final int compartmentNumber) {
