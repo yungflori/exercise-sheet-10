@@ -17,7 +17,7 @@ public final class Customer {
 	 * @param name Name of the customer.
 	 * @throws IllegalArgumentException If the preconditions are not satisfied.
 	 */
-	public Customer(final String name) throws IllegalArgumentException {
+	public Customer(final String name) {
 		if (name == null || name.length() == 0) {
 			throw new IllegalArgumentException("Customers may not have null or empty names.");
 		}

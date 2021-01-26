@@ -20,7 +20,7 @@ public final class ItemIdentification {
 	 * @param itemNumber Unique number of the item.
 	 * @throws IllegalArgumentException If the preconditions are not satisfied.
 	 */
-	public ItemIdentification(final ItemType type, final int itemNumber) throws IllegalArgumentException {
+	public ItemIdentification(final ItemType type, final int itemNumber) {
 		if (type == null) {
 			throw new IllegalArgumentException("Item type may not be null.");
 		}

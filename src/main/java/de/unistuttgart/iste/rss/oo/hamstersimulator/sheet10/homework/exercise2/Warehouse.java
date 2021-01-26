@@ -23,7 +23,7 @@ public final class Warehouse {
 	 * @param capacity Capacity of the warehouse in items.
 	 * @throws IllegalArgumentException If the preconditions are not satisfied.
 	 */
-	public Warehouse(final int capacity) throws IllegalArgumentException {
+	public Warehouse(final int capacity) {
 		if (capacity <= 0) {
 			throw new IllegalArgumentException("A warehouse must have a minimum capacity of 1.");
 		}

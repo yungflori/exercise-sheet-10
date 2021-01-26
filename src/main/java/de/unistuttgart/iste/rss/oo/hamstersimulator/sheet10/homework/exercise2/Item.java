@@ -17,7 +17,7 @@ public final class Item {
 	 * @param identification Identification of the item.
 	 * @throws IllegalArgumentException If the preconditions are not satisfied.
 	 */
-	public Item(final ItemIdentification identification) throws IllegalArgumentException {
+	public Item(final ItemIdentification identification) {
 		if (identification == null) {
 			throw new IllegalArgumentException("An item must have an identification that is not null.");
 		}
