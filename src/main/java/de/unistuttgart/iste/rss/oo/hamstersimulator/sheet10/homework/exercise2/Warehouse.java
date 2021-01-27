@@ -12,13 +12,11 @@ public final class Warehouse {
 	
 	private final int capacity;
 	private int numberOfItems;
-	private final Item[] items;
-	//TODO: Add data structure for exercise 2c
+	//TODO: Add data structures for exercises 2a and 2c
 	
 	/*@
 	  @ requires capacity > 0;
 	  @ ensures this.capacity == capacity;
-	  @ ensures items.length == capacity;
 	  @*/
 	/**
 	 * Creates a new warehouse with the given capacity.
@@ -31,8 +29,7 @@ public final class Warehouse {
 		}
 		this.capacity = capacity;
 		numberOfItems = 0;
-		items = new Item[capacity];
-		//TODO: Initialize data structure for exercise 2c
+		//TODO: Initialize data structures for exercises 2a and 2c
 	}
 	
 	public void addItem(final Item item) {
