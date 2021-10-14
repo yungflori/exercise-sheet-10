@@ -1,6 +1,6 @@
 package de.unistuttgart.iste.rss.oo.hamstersimulator.sheet10.teacher;
 
-import de.unistuttgart.iste.rss.oo.hamstersimulator.external.model.SimpleHamsterGame;
+import de.hamstersimulator.objectsfirst.external.model.SimpleHamsterGame;
 
 /**
  * Hamster game which contains a bug. It's being used to demonstrate the debugging tools provided by eclipse.
