@@ -1,12 +1,12 @@
-package de.unistuttgart.iste.rss.oo.hamstersimulator.sheet10.presence.exercise2;
+package de.unistuttgart.iste.sqa.pse.sheet10.presence.exercise2;
 
 import java.util.Date;
 
 /**
- * this class represents a ventilator which should be opened independent of the
- * current temperature
+ * This class represents a ventilator which should be opened independent of the
+ * current temperature.
  *
- * @version 14.01.2021
+ * @version 08.12.2021
  */
 public class Ventilator {
     public int id;

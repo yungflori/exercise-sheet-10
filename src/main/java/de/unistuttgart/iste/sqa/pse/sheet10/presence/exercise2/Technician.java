@@ -1,9 +1,9 @@
-package de.unistuttgart.iste.rss.oo.hamstersimulator.sheet10.presence.exercise2;
+package de.unistuttgart.iste.sqa.pse.sheet10.presence.exercise2;
 
 /**
- * this class represents a technician who requests maintenance for the stable
+ * This class represents a technician who requests maintenance for the stable.
  *
- * @version 14.01.2021
+ * @version 08.12.2021
  */
 public class Technician {
     private int id;

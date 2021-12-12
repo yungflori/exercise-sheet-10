@@ -39,7 +39,7 @@
 					<execution>
 						<id>BuggyHamsterGameApp</id>
 						<configuration>
-							<mainClass>de.unistuttgart.iste.rss.oo.hamstersimulator.sheet10.teacher.BuggyHamsterGameApp</mainClass>
+							<mainClass>de.unistuttgart.iste.sqa.pse.sheet10.teacher.BuggyHamsterGameApp</mainClass>
 						</configuration>
 					</execution>
 				</executions>

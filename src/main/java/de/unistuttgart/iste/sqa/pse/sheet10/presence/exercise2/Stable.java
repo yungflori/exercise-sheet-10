@@ -1,12 +1,12 @@
-package de.unistuttgart.iste.rss.oo.hamstersimulator.sheet10.presence.exercise2;
+package de.unistuttgart.iste.sqa.pse.sheet10.presence.exercise2;
 
 import java.util.List;
 
 /**
- * this class represents a barn, which consists of fans and cages. In this stable
- * laying poultries can be breed
+ * This class represents a barn, which consists of fans and cages. In this stable
+ * laying poultries can be bred.
  *
- * @version 14.01.2021
+ * @version 08.12.2021
  */
 public class Stable {
     public int id;

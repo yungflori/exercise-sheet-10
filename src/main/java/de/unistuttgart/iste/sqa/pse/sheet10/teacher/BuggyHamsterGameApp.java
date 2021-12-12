@@ -1,4 +1,4 @@
-package de.unistuttgart.iste.rss.oo.hamstersimulator.sheet10.teacher;
+package de.unistuttgart.iste.sqa.pse.sheet10.teacher;
 
 public class BuggyHamsterGameApp {
 
