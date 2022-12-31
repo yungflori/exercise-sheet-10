@@ -7,7 +7,7 @@ import java.util.List;
  * This an implementation of the popular boardgame Mensch�rgereDichNicht
  *
  * @author Sven Naber
- * @version 1.0
+ * @version 1.1
  */
 public class Game {
     Boolean rolled6;
@@ -121,10 +121,10 @@ public class Game {
             }
         }
         System.out.println("");
-        System.out.println("Start Red " + startRed + " Pieces");
-        System.out.println("Start Blue " + startBlue + " Pieces");
-        System.out.println("Start Yellow " + startYellow + " Pieces");
-        System.out.println("Start Green " + startGreen + " Pieces");
+        System.out.println("Start RED " + startRed + " Pieces");
+        System.out.println("Start BLUE " + startBlue + " Pieces");
+        System.out.println("Start YELLOW " + startYellow + " Pieces");
+        System.out.println("Start GREEN " + startGreen + " Pieces");
         System.out.println("");
         System.out.println("        " + field[18] + " " + field[19] + " " + field[20] + "        ");
         System.out.println("        " + field[17] + " " + goal[8] + " " + field[21] + "        ");
@@ -143,8 +143,8 @@ public class Game {
 
 
     public static void main(String[] args) {
-        Game game1 = new Game();
-        game1.run();
+        Game testgame1 = new Game();
+        testgame1.run();
     }
 
 
