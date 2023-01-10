@@ -5,7 +5,5 @@ public class BuggyHamsterGameApp {
 	public static void main(String[] args) {
 		final BuggyHamsterGame game = new BuggyHamsterGame();
 		game.doRun();
-
 	}
-
 }

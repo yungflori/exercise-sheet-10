@@ -9,21 +9,18 @@ import java.util.Date;
  * @version 08.12.2021
  */
 public class Ventilator {
-    public int id;
-    private int width;
-    private int height;
-    private boolean on;
-    private Date purchaseDate;
-    private int powerClimatisation;
+	public int id;
+	private int width;
+	private int height;
+	private boolean on;
+	private Date purchaseDate;
+	private int powerClimatisation;
 
-    protected void turnOn() {
-    }
+	protected void turnOn() {}
 
-    protected void turnOff() {
-    }
+	protected void turnOff() {}
 
-    protected boolean isOn() {
-        return this.on;
-    }
-
+	protected boolean isOn() {
+		return this.on;
+	}
 }

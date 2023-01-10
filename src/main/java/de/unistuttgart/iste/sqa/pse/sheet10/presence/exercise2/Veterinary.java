@@ -7,12 +7,12 @@ package de.unistuttgart.iste.sqa.pse.sheet10.presence.exercise2;
  * @version 08.12.2021
  */
 public class Veterinary {
-    private int id;
-    private String firstName;
-    private String lastName;
-    private String phone;
+	private int id;
+	private String firstName;
+	private String lastName;
+	private String phone;
 
-    protected void careForAllPoultries() {}
-    
-    private void careFor(LayingPoultry illLayingPoultry) {}
+	protected void careForAllPoultries() {}
+
+	private void careFor(LayingPoultry illLayingPoultry) {}
 }
