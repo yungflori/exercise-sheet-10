@@ -104,7 +104,9 @@ public class Game {
 					field[piece.getPosition().coordinate] = colourHelper(piece.owner.playerColour);
 				}
 				if (piece.getPosition().getZone() == Zone.GOAL) {
-					int goalNumber = piece.getPosition().coordinate + piece.owner.getStartIdByColour(piece.owner.playerColour)- 1;
+					int goalNumber = piece.getPosition().coordinate
+							+ piece.owner.getStartIdByColour(piece.owner.playerColour)
+							- 1;
 					goal[goalNumber] = colourHelper(piece.owner.playerColour);
 				}
 				if (piece.getPosition().getZone() == Zone.START) {
