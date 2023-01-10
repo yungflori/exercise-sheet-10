@@ -3,7 +3,7 @@ package de.unistuttgart.iste.sqa.pse.sheet10.presence.exercise2;
 /**
  * This class represents a cage in which a defined number of laying poultries can live.
  *
- * @version 08.12.2021
+ * @version 1.0
  */
 public class Cage<T extends LayingPoultry> {
 	public int id;

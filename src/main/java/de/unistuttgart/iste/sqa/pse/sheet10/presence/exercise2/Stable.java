@@ -6,7 +6,7 @@ import java.util.List;
  * This class represents a barn, which consists of fans and cages. In this stable
  * laying poultries can be bred.
  *
- * @version 08.12.2021
+ * @version 1.0
  */
 public class Stable {
 	public int id;
