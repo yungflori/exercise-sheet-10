@@ -17,12 +17,12 @@ Homework excercise 1 will output to the console.
 
 ### Run the project in Eclipse
 - First, make sure again to have the correct Java version set in your project: Go to `Eclipse` > `Preferences` > `Java` > `Compiler` and set the `Compiler compliance level` to `17` (or higher).
-- Also make sure that you have followed the instructions pertaining the console character limits - under 'Window' > 'Preferences' 'Run/Debug' 'Console' either uncheck the box for 'Limit console output' or increase the allowed character limit.
+- Also make sure that you have followed the instructions pertaining the console character limits - under `Window` > `Preferences` `Run/Debug` `Console` either uncheck the box for `Limit console output` or increase the allowed character limit.
 - Either, right click on the corresponding main class and select `Run as` > `Java Application`, or if you have started the class previously, click on the green `Play` (run) Button" in the top left corner or in the menu under `Run` > `Run`.
 
 ### Run the project in IntelliJ
 - First, make sure again to have the correct Java version set in your project: Go to `File` > `Project Structure...` In `Project Settings` > `Project` > `SDK` select `Java 17`.
-- Also make sure that you have followed the instructions pertaining the console character limits - under 'File' > 'Settings' 'Editor' 'General' 'Console' check the box for 'Override console cycle buffer size' and increase the allowed character limit.
+- Also make sure that you have followed the instructions pertaining the console character limits - under `File` > `Settings` `Editor` `General` `Console` check the box for `Override console cycle buffer size` and increase the allowed character limit.
 - In the menu, Go to `Run` > `Edit Configurations...`, click on the plus icon and select `Application`.
 - Now, you have to select the Main class, i.e., the starting point for running the application. To do so, under `Build and Run`, click on `Main class` (or the dollar sign to the right) and select the class you want to start. 
 
