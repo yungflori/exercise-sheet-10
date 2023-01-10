@@ -7,7 +7,7 @@ import java.util.List;
  * This an implementation of the popular boardgame Mensch�rgereDichNicht
  *
  * @author Sven Naber
- * @version 1.1
+ * @version 1.0
  */
 public class Game {
 	Boolean rolled6;
@@ -104,11 +104,8 @@ public class Game {
 					field[piece.getPosition().coordinate] = colourHelper(piece.owner.playerColour);
 				}
 				if (piece.getPosition().getZone() == Zone.GOAL) {
-					goal[
-									piece.getPosition().coordinate
-											+ piece.owner.getStartIdByColour(piece.owner.playerColour)
-											- 1] =
-							colourHelper(piece.owner.playerColour);
+					int goalNumber = piece.getPosition().coordinate + piece.owner.getStartIdByColour(piece.owner.playerColour)- 1;
+					goal[goalNumber] = colourHelper(piece.owner.playerColour);
 				}
 				if (piece.getPosition().getZone() == Zone.START) {
 					if (piece.owner.playerColour == Colour.RED) {

@@ -8,7 +8,7 @@ import java.util.Random;
  * This is the implementation of a Player in Mensch�rgereDichNicht
  *
  * @author Sven Naber
- * @version 1.1
+ * @version 1.0
  */
 public class Player {
 	List<Piece> pieces = new LinkedList<Piece>();
