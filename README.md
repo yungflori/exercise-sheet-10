@@ -31,6 +31,13 @@ Homework excercise 1 will output to the console.
 
 ### Run the project via command line with Maven
 
+Homework excercise 1:
   ```sh
   mvn clean compile exec:java@Game
   ```
+  
+  Teacher:
+  ```sh
+  mvn clean compile exec:java@BuggyHamsterGameApp
+  ```
+
