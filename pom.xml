@@ -41,6 +41,12 @@
 							<mainClass>de.unistuttgart.iste.sqa.pse.sheet10.teacher.BuggyHamsterGameApp</mainClass>
 						</configuration>
 					</execution>
+					<execution>
+						<id>Game</id>
+						<configuration>
+							<mainClass>de.unistuttgart.iste.sqa.pse.sheet10.homework.exercise1.Game</mainClass>
+						</configuration>
+					</execution>
 				</executions>
 			</plugin>
 			<plugin>

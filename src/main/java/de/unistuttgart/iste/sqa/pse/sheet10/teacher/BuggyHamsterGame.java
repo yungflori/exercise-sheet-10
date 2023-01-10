@@ -1,6 +1,6 @@
 package de.unistuttgart.iste.sqa.pse.sheet10.teacher;
 
-import de.hamstersimulator.objectsfirst.external.model.SimpleHamsterGame;
+import de.hamstersimulator.objectsfirst.external.simple.game.SimpleHamsterGame;
 
 /**
  * Hamster game which contains a bug. It's being used to demonstrate the debugging tools provided by the IDE.
