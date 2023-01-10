@@ -28,9 +28,3 @@ Homework excercise 1 will output to the console.
 
 ### Run the project in VS Code
 - Use the instructions presented in [youtu.be/BGJC0pQsQAo](https://youtu.be/BGJC0pQsQAo)
-
-### Run the project via command line with Maven
-
-  ```sh
-  mvn clean compile exec:java@$Game
-  ```
