@@ -5,24 +5,23 @@ package de.unistuttgart.iste.sqa.pse.sheet10.homework.exercise2;
  */
 public final class Buffer {
 
-    //TODO: Add data structure for exercise 2f
+	// TODO: Add data structure for exercise 2f
 
-    public Buffer() {
-        //TODO: Initialize data structure for exercise 2f
-    }
+	public Buffer() {
+		// TODO: Initialize data structure for exercise 2f
+	}
 
-    public void bufferItem(final Item item) {
-        //TODO: Exercise 2g
-    }
+	public void bufferItem(final Item item) {
+		// TODO: Exercise 2g
+	}
 
-    public Item releaseItem() {
-        //TODO: Exercise 2g
-        return null;
-    }
+	public Item releaseItem() {
+		// TODO: Exercise 2g
+		return null;
+	}
 
-    public boolean isEmpty() {
-        //TODO: Exercise 2g
-        return false;
-    }
-
+	public boolean isEmpty() {
+		// TODO: Exercise 2g
+		return false;
+	}
 }

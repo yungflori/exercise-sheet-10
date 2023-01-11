@@ -6,24 +6,21 @@ import java.util.Date;
  * This class represents a ventilator which should be opened independent of the
  * current temperature.
  *
- * @version 08.12.2021
+ * @version 1.0
  */
 public class Ventilator {
-    public int id;
-    private int width;
-    private int height;
-    private boolean on;
-    private Date purchaseDate;
-    private int powerClimatisation;
+	public int id;
+	private int width;
+	private int height;
+	private boolean on;
+	private Date purchaseDate;
+	private int powerClimatisation;
 
-    protected void turnOn() {
-    }
+	protected void turnOn() {}
 
-    protected void turnOff() {
-    }
+	protected void turnOff() {}
 
-    protected boolean isOn() {
-        return this.on;
-    }
-
+	protected boolean isOn() {
+		return this.on;
+	}
 }
