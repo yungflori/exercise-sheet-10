@@ -1,4 +1,4 @@
-package de.unistuttgart.iste.sqa.pse.sheet10.homework.exercise2;
+package de.unistuttgart.iste.sqa.pse.sheet10.homework.warehouse;
 
 /**
  * Identification object for an individual item.
