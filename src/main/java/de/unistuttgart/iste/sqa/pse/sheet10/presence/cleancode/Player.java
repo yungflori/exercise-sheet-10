@@ -1,4 +1,4 @@
-package de.unistuttgart.iste.sqa.pse.sheet10.homework.exercise1;
+package de.unistuttgart.iste.sqa.pse.sheet10.presence.cleancode;
 
 import java.util.LinkedList;
 import java.util.List;

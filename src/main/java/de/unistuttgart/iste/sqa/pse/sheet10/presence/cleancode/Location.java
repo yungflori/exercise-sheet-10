@@ -1,4 +1,4 @@
-package de.unistuttgart.iste.sqa.pse.sheet10.homework.exercise1;
+package de.unistuttgart.iste.sqa.pse.sheet10.presence.cleancode;
 
 /**
  * This is the implementation of a Location in Mensch�rgereDichNicht
