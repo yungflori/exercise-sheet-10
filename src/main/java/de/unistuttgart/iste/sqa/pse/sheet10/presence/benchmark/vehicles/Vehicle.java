@@ -30,4 +30,11 @@ public interface Vehicle {
 	 * @return the performance value of the vehicle.
 	 */
 	public double getPerformance();
+
+	/**
+	 * Get the code that identifies a vehicle.
+	 *
+	 * @return an alphanumerical code that identifies a vehicle.
+	 */
+	public String getVehicleCode();
 }
