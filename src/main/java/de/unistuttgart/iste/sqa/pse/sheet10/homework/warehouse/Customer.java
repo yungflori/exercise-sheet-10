@@ -12,10 +12,8 @@ public final class Customer {
 	@ requires name != null && name.length() > 0;
 	@ ensures this.name == name;
 	@*/
-
 	/**
 	 * Creates a new customer with the given name.
-	 *
 	 * @param name Name of the customer.
 	 * @throws IllegalArgumentException If the preconditions are not satisfied.
 	 */
@@ -29,7 +27,6 @@ public final class Customer {
 	/*@
 	@ ensures \result == name;
 	@*/
-
 	/**
 	 * @return This customer's name.
 	 */

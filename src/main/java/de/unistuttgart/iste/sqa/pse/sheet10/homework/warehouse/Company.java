@@ -1,94 +1,77 @@
 package de.unistuttgart.iste.sqa.pse.sheet10.homework.warehouse;
 
+import java.util.HashSet;
 import java.util.Optional;
 import java.util.Random;
+import java.util.Set;
+
+import de.unistuttgart.iste.sqa.pse.sheet10.homework.warehouse.items.Compass;
+import de.unistuttgart.iste.sqa.pse.sheet10.homework.warehouse.items.StationeryItem;
+import de.unistuttgart.iste.sqa.pse.sheet10.homework.warehouse.items.Pen;
+import de.unistuttgart.iste.sqa.pse.sheet10.homework.warehouse.items.Ruler;
 
 /**
- * Represents the company from homework exercise 2.
- * 
+ * Represents a company.
+ *
+ * A company stores items and processes orders.
+ *
  * @author your name
  */
 public final class Company {
 
-	private final Warehouse penWarehouse;
-	private final Warehouse triangleRulerWarehouse;
-	private final Warehouse compassWarehouse;
+	private final StorageRack itemStorageRack;
 	private final Buffer orderBuffer;
-	// TODO: Add data structure for exercise 1i
+	// TODO: Add data structure for exercise 1i here.
 
+	// TODO add documentation here.
 	public Company() {
 		orderBuffer = new Buffer();
-		// TODO: Exercises 1e and 1i
-		penWarehouse = triangleRulerWarehouse = compassWarehouse = null;
+		// TODO: implement exercises 1e and 1i here.
+		itemStorageRack = null; // TODO delete this line if necessary
 	}
 
-	public void handleIncomingItem(final Item item) {
-		// TODO: Exercise 1e
+	// TODO add documentation here.
+	public void storeInStorageRack(final StationeryItem stationeryItem) {
+		// TODO: implement exercise 1e here.
 	}
 
-	public void processIncomingOrder(final ItemIdentification identification, final Customer customer) {
-		// TODO: Exercises 1h and 1i
+	// TODO add documentation here.
+	public void processIncomingOrder(final Identifier identifier, final Customer customer) {
+		// TODO implement exercises 1h and 1i here.
 	}
+
 
 	/*@
 	@ ensures \result != null;
 	@ ensures \result.getIdentification().getType() == ItemType.PRESENT;
 	@*/
-
 	/**
-	 * Generates a marketing present item for exercise 2i.
-	 *
-	 * @return A marketing present item.
+	 * Generates a bonus item for marketing reasons.
+	 * 
+	 * @return A marketing bonus item.
 	 */
-	private /*@ pure @*/ Item getPresent() {
-		ItemType type = ItemType.PRESENT;
-		int itemNumber = new Random().nextInt();
-		ItemIdentification identification = new ItemIdentification(type, itemNumber);
-		return new Item(identification);
+	private /*@ pure @*/ StationeryItem getBonusItem() {
+		
+		switch ((new Random().nextInt(3))) {
+		case 1: 
+			return new Compass(new Identifier(), "A marketing bonus item.");
+		case 2: 
+			return new Ruler(new Identifier(), "A marketing bonus item.");
+		default:
+			return new Pen(new Identifier(), "A marketing bonus item.");
+		}
 	}
 
-	/*@
-	@ ensures \old(orderBuffer.isEmpty()) <==> \result.isEmpty();
-	@*/
-
 	/**
-	 * Takes the next available item for packaging and returns it.
-	 *
+	 * If items are waiting for packaging, takes the next available item from the buffer and return it.
+	 * 
 	 * @return Optional next available item for packaging, or an empty Optional if there is none.
 	 */
-	public Optional<Item> takeItemForPackaging() {
+	public Optional<StationeryItem> takeItemForPackaging() {
 		if (orderBuffer.isEmpty()) {
 			return Optional.empty();
 		} else {
 			return Optional.of(orderBuffer.releaseItem());
 		}
-	}
-
-	/*@
-	@ requires type != null;
-	@*/
-	/**
-	 * Returns the warehouse in which items of the given type are stored.
-	 *
-	 * @param type Type for which to get the warehouse.
-	 * @return An Optional containing the warehouse for items of the given type, or an empty Optional if there is none.
-	 */
-	private /*@ pure @*/ Optional<Warehouse> getWarehouseOf(final ItemType type) {
-		assert type != null;
-		final Optional<Warehouse> warehouse;
-		switch (type) {
-			case PEN:
-				warehouse = Optional.of(penWarehouse);
-				break;
-			case TRIANGLE_RULER:
-				warehouse = Optional.of(triangleRulerWarehouse);
-				break;
-			case COMPASS:
-				warehouse = Optional.of(compassWarehouse);
-				break;
-			default:
-				warehouse = Optional.empty();
-		}
-		return warehouse;
 	}
 }
