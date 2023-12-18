@@ -1,7 +1,6 @@
 package de.unistuttgart.iste.sqa.pse.sheet10.presence.scopes;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.function.Consumer;
 
 import de.hamstersimulator.objectsfirst.datatypes.Direction;

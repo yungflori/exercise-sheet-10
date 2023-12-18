@@ -7,11 +7,11 @@ package de.unistuttgart.iste.sqa.pse.sheet10.presence.benchmark.vehicles;
 public interface Vehicle {
 
 	/**
-	 * Access the total weight of the vehicle. 
+	 * Access the total weight of the vehicle in tons. 
 	 * 
 	 * If a vehicle transport freight, the weight of the freight, is also included into the vehicle's total weight.
 	 * 
-	 * @return total weight of the vehicle.
+	 * @return total weight of the vehicle in tons.
 	 */
 	public double getWeight();
 	
@@ -25,7 +25,7 @@ public interface Vehicle {
 	/**
 	 * Access the performance value of the vehicle.
 	 * 
-	 * The performance value is calculated based on the vehicles weight and the power its engine. 
+	 * The performance value is calculated based on the vehicles weight in tons and the power its engine. 
 	 * 
 	 * @return the performance value of the vehicle.
 	 */

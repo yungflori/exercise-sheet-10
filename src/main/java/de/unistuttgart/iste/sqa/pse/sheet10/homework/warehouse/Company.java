@@ -5,6 +5,8 @@ import java.util.Random;
 
 /**
  * Represents the company from homework exercise 2.
+ * 
+ * @author your name
  */
 public final class Company {
 
@@ -12,20 +14,20 @@ public final class Company {
 	private final Warehouse triangleRulerWarehouse;
 	private final Warehouse compassWarehouse;
 	private final Buffer orderBuffer;
-	// TODO: Add data structure for exercise 2i
+	// TODO: Add data structure for exercise 1i
 
 	public Company() {
 		orderBuffer = new Buffer();
-		// TODO: Exercises 2e and 2i
+		// TODO: Exercises 1e and 1i
 		penWarehouse = triangleRulerWarehouse = compassWarehouse = null;
 	}
 
 	public void handleIncomingItem(final Item item) {
-		// TODO: Exercise 2e
+		// TODO: Exercise 1e
 	}
 
 	public void processIncomingOrder(final ItemIdentification identification, final Customer customer) {
-		// TODO: Exercises 2h and 2i
+		// TODO: Exercises 1h and 1i
 	}
 
 	/*@
@@ -60,5 +62,33 @@ public final class Company {
 		} else {
 			return Optional.of(orderBuffer.releaseItem());
 		}
+	}
+
+	/*@
+	@ requires type != null;
+	@*/
+	/**
+	 * Returns the warehouse in which items of the given type are stored.
+	 *
+	 * @param type Type for which to get the warehouse.
+	 * @return An Optional containing the warehouse for items of the given type, or an empty Optional if there is none.
+	 */
+	private /*@ pure @*/ Optional<Warehouse> getWarehouseOf(final ItemType type) {
+		assert type != null;
+		final Optional<Warehouse> warehouse;
+		switch (type) {
+			case PEN:
+				warehouse = Optional.of(penWarehouse);
+				break;
+			case TRIANGLE_RULER:
+				warehouse = Optional.of(triangleRulerWarehouse);
+				break;
+			case COMPASS:
+				warehouse = Optional.of(compassWarehouse);
+				break;
+			default:
+				warehouse = Optional.empty();
+		}
+		return warehouse;
 	}
 }

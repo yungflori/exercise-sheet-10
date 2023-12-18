@@ -24,4 +24,9 @@ public record TestRoute(int length, double velocity, String name) {
 		this.velocity = velocity;
 		this.name = name;
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("%s [velocity = %f, length = %d]", this.name, this.velocity, this.length);
+	}
 }

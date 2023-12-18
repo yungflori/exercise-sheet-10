@@ -4,6 +4,8 @@ import java.util.Optional;
 
 /**
  * Represents a warehouse that can hold a fixed number of items.
+ * 
+ * @author your name
  */
 public final class Warehouse {
 	// @ private instance invariant capacity > 0;
@@ -12,7 +14,7 @@ public final class Warehouse {
 
 	private final int capacity;
 	private int numberOfItems;
-	// TODO: Add data structures for exercises 2a and 2c
+	// TODO: Add data structures for exercises 1a and 1c
 
 	/*@
 	@ requires capacity > 0;
@@ -30,27 +32,27 @@ public final class Warehouse {
 			throw new IllegalArgumentException("A warehouse must have a minimum capacity of 1.");
 		}
 		this.capacity = capacity;
-		numberOfItems = 0;
-		// TODO: Initialize data structures for exercises 2a and 2c
+		this.numberOfItems = 0;
+		// TODO: Initialize data structures for exercises 1a and 1c
 	}
 
 	public void addItem(final Item item) {
-		// TODO: Exercises 2b and 2d
-		numberOfItems++;
+		// TODO: Exercises 1b and 1d
+		this.numberOfItems++;
 	}
 
 	public void removeItem(final int compartmentNumber) {
-		// TODO: Exercises 2b and 2d
-		numberOfItems--;
+		// TODO: Exercises 1b and 1d
+		this.numberOfItems--;
 	}
 
 	public Optional<Item> getItem(final int compartmentNumber) {
-		// TODO: Exercise 2b
+		// TODO: Exercise 1b
 		return Optional.empty();
 	}
 
 	public Optional<Integer> getCompartmentNumberOf(final ItemIdentification identification) {
-		// TODO: Exercise 2d
+		// TODO: Exercise 1d
 		return Optional.empty();
 	}
 
@@ -62,7 +64,7 @@ public final class Warehouse {
 	 * @return The capacity of this warehouse in items.
 	 */
 	public /*@ pure @*/ int getCapacity() {
-		return capacity;
+		return this.capacity;
 	}
 
 	/*@
@@ -73,6 +75,6 @@ public final class Warehouse {
 	 * @return The number of items in this warehouse.
 	 */
 	public /*@ pure @*/ int getNumberOfItems() {
-		return numberOfItems;
+		return this.numberOfItems;
 	}
 }
