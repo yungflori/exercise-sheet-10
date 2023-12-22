@@ -36,15 +36,15 @@
 				<version>3.1.0</version>
 				<executions>
 					<execution>
-						<id>BuggyHamsterGameApp</id>
+						<id>WeAreAllPauleHereHamsterGameApp</id>
 						<configuration>
-							<mainClass>de.unistuttgart.iste.sqa.pse.sheet10.teacher.BuggyHamsterGameApp</mainClass>
+							<mainClass>de.unistuttgart.iste.sqa.pse.sheet10.presence.scopes.WeAreAllPauleHereHamsterGameApp</mainClass>
 						</configuration>
 					</execution>
 					<execution>
-						<id>Game</id>
+						<id>Main</id>
 						<configuration>
-							<mainClass>de.unistuttgart.iste.sqa.pse.sheet10.homework.exercise1.Game</mainClass>
+							<mainClass>de.unistuttgart.iste.sqa.pse.sheet10.homework.warehouse.Main</mainClass>
 						</configuration>
 					</execution>
 				</executions>

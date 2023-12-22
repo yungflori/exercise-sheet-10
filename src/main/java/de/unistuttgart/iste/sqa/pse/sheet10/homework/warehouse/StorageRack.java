@@ -1,8 +1,7 @@
 package de.unistuttgart.iste.sqa.pse.sheet10.homework.warehouse;
 
-import java.util.Optional;
-
 import de.unistuttgart.iste.sqa.pse.sheet10.homework.warehouse.items.StationeryItem;
+import java.util.Optional;
 
 /**
  * Represents a warehouse that can hold a fixed number of items.
@@ -45,7 +44,6 @@ public final class StorageRack {
 	public void addItem(final StationeryItem stationeryItem) {
 		// TODO implement exercises 1b and 1d here.
 	}
-
 
 	// TODO add documentation here.
 	public void removeItem(final int compartmentNumber) {
