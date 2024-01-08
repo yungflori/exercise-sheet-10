@@ -16,7 +16,7 @@ public final class StorageRack {
 
 	private final int capacity;
 	private int numberOfItems;
-	private final StationeryItem[] compartments; // Array to represent compartments
+	private final Optional<StationeryItem>[] compartments; // Array of Optional<StationeryItem>
 
 	/*@
 	@ requires capacity > 0;
@@ -45,9 +45,25 @@ public final class StorageRack {
 		}
 	}
 
-	// TODO add documentation here.
+	/*@
+    @ requires stationeryItem != null;
+    @ requires numberOfItems < capacity; // Ensure there is space in the rack
+    @*/
+
+	/**
+	 *
+	 *
+	 * @param stationeryItem
+	 */
 	public void addItem(final StationeryItem stationeryItem) {
-		// TODO implement exercises 1b and 1d here.
+		// Find the first available storage space (Optional.empty())
+		for (int i = 0; i < capacity; i++) {
+			if (!compartments[i].isPresent()) {
+				compartments[i] = Optional.of(stationeryItem);
+				numberOfItems++;
+				return; // Stop once an empty compartment is found and the item is added
+			}
+		}
 	}
 
 	// TODO add documentation here.
