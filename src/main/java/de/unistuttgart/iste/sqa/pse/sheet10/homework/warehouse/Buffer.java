@@ -5,7 +5,7 @@ import de.unistuttgart.iste.sqa.pse.sheet10.homework.warehouse.items.StationeryI
 /**
  * Represents a buffer for temporary storage of items.
  *
- * @author your name
+ * @author AmoreSchneyinck
  */
 public final class Buffer {
 
