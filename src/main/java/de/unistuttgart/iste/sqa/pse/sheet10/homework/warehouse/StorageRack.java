@@ -16,13 +16,13 @@ public final class StorageRack {
 
 	private final int capacity;
 	private int numberOfItems;
-	// TODO: Add data structures for exercises 1a and 1c here.
+	private final StationeryItem[] compartments; // Array to represent compartments
 
 	/*@
 	@ requires capacity > 0;
 	@ ensures this.capacity == capacity;
 	@ ensures numberOfItems == 0;
-	@ TODO add missing pre- and postconditions here or in the JavaDoc.
+    @ ensures compartments.length == capacity; // Additional postcondition for array initialization.
 	@*/
 	/**
 	 * Creates a new storage rack with the given capacity.
@@ -37,7 +37,12 @@ public final class StorageRack {
 		}
 		this.capacity = capacity;
 		numberOfItems = 0;
-		// TODO initialize data structures for exercises 1a and 1c here.
+		this.compartments = new Optional[capacity];
+
+		// Initialize each compartment with empty Optional
+		for (int i = 0; i < capacity; i++) {
+			compartments[i] = Optional.empty();
+		}
 	}
 
 	// TODO add documentation here.
