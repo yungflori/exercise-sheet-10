@@ -66,15 +66,41 @@ public final class StorageRack {
 		}
 	}
 
-	// TODO add documentation here.
+	/**
+	 * Removes the individual item at the given storage space from the data structure of the storage rack.
+	 * If the individual item is not present, nothing happens.
+	 *
+	 * @param compartmentNumber the compartment number from which to remove the item.
+	 */
 	public void removeItem(final int compartmentNumber) {
-		// TODO implement exercises 1b and 1d here.
+		// Check if the compartmentNumber is valid
+		if (compartmentNumber >= 0 && compartmentNumber < capacity) {
+			Optional<StationeryItem> optionalItem = compartments[compartmentNumber];
+
+			// Check if the compartment contains an item
+			if (optionalItem.isPresent()) {
+				// Remove the item by replacing it with an empty Optional
+				compartments[compartmentNumber] = Optional.empty();
+				numberOfItems--;
+			}
+			// If the compartment is already empty, do nothing
+		}
+		// If compartmentNumber is invalid (negative or greater than or equal to capacity), do nothing
 	}
 
-	// TODO add documentation here.
-	public /*@ pure @*/ Optional<StationeryItem> getItem(final int compartmentNumber) {
-		// TODO implement exercise 1b here.
-		return Optional.empty(); // TODO delete this line if necessary.
+	/**
+	 * Returns the individual item at the given storage space.
+	 *
+	 * @param compartmentNumber the compartment number from which to retrieve the item.
+	 * @return an Optional containing the individual item if present, or an empty Optional if the compartment is empty.
+	 */
+	public Optional<StationeryItem> getItem(final int compartmentNumber) {
+		// Check if the compartmentNumber is valid
+		if (compartmentNumber >= 0 && compartmentNumber < capacity) {
+			return compartments[compartmentNumber];
+		}
+		// If compartmentNumber is invalid (negative or greater than or equal to capacity), return empty Optional
+		return Optional.empty();
 	}
 
 	// TODO add documentation here.
