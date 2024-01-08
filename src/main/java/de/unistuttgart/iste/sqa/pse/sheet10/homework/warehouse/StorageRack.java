@@ -7,7 +7,7 @@ import java.util.Optional;
  * Represents a warehouse that can hold a fixed number of items.
  * The number of holdable items is defined by the capacity of the storage rack.
  *
- * @author your name
+ * @author AmoresSchneyinck
  */
 public final class StorageRack {
 	// @ private instance invariant capacity > 0;
