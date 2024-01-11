@@ -18,13 +18,13 @@ public final class StorageRack {
 	private final int capacity;
 	private int numberOfItems;
 	private final Optional<StationeryItem>[] compartments; // Array of Optional<StationeryItem>
-	private final HashMap<Identifier, Integer> identifierToCompartmentMap; // New attribute
+	private final HashMap<Identifier, Integer> identifierToCompartmentMap;
 
     /*@
     @ requires capacity > 0;
     @ ensures this.capacity == capacity;
     @ ensures numberOfItems == 0;
-    @ ensures compartments.length == capacity; // Additional postcondition for array initialization.
+    @ ensures compartments.length == capacity; // Additional post-condition for array initialization.
     @*/
 	/**
 	 * Creates a new storage rack with the given capacity.
@@ -41,6 +41,9 @@ public final class StorageRack {
 		numberOfItems = 0;
 		this.compartments = new Optional[capacity];
 		this.identifierToCompartmentMap = new HashMap<>();
+
+		// New attribute
+		HashMap<Identifier, Integer> identifierToCompartmentMap = new HashMap<>();
 
 		// Initialize each compartment with empty Optional
 		for (int i = 0; i < capacity; i++) {
@@ -61,7 +64,7 @@ public final class StorageRack {
 	public void addItem(final StationeryItem stationeryItem) {
 		// Find the first available storage space (Optional.empty())
 		for (int i = 0; i < capacity; i++) {
-			if (!compartments[i].isPresent()) {
+			if (compartments[i].isEmpty()) {
 				compartments[i] = Optional.of(stationeryItem);
 				numberOfItems++;
 				return; // Stop once an empty compartment is found and the item is added
