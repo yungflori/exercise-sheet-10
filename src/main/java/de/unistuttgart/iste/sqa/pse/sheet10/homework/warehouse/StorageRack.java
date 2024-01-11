@@ -42,9 +42,6 @@ public final class StorageRack {
 		this.compartments = new Optional[capacity];
 		this.identifierToCompartmentMap = new HashMap<>();
 
-		// New attribute
-		HashMap<Identifier, Integer> identifierToCompartmentMap = new HashMap<>();
-
 		// Initialize each compartment with empty Optional
 		for (int i = 0; i < capacity; i++) {
 			compartments[i] = Optional.empty();
@@ -64,13 +61,20 @@ public final class StorageRack {
 	public void addItem(final StationeryItem stationeryItem) {
 		// Find the first available storage space (Optional.empty())
 		for (int i = 0; i < capacity; i++) {
-			if (compartments[i].isEmpty()) {
+			if (!compartments[i].isPresent()) {
+				// Store the item in the compartment
 				compartments[i] = Optional.of(stationeryItem);
 				numberOfItems++;
+
+				// Store the mapping in identifierToCompartmentMap
+				Identifier identifier = stationeryItem.getIdentifier();
+				identifierToCompartmentMap.put(identifier, i);
+
 				return; // Stop once an empty compartment is found and the item is added
 			}
 		}
 	}
+
 
 	/**
 	 * Removes the individual item at the given storage space from the data structure of the storage rack.
@@ -85,9 +89,15 @@ public final class StorageRack {
 
 			// Check if the compartment contains an item
 			if (optionalItem.isPresent()) {
+				// Retrieve the identifier of the item to be removed
+				Identifier identifier = optionalItem.get().getIdentifier();
+
 				// Remove the item by replacing it with an empty Optional
 				compartments[compartmentNumber] = Optional.empty();
 				numberOfItems--;
+
+				// Delete the mapping from identifierToCompartmentMap
+				identifierToCompartmentMap.remove(identifier);
 			}
 			// If the compartment is already empty, do nothing
 		}
