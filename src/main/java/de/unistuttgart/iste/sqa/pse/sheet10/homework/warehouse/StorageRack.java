@@ -2,6 +2,7 @@ package de.unistuttgart.iste.sqa.pse.sheet10.homework.warehouse;
 
 import de.unistuttgart.iste.sqa.pse.sheet10.homework.warehouse.items.StationeryItem;
 import java.util.Optional;
+import java.util.HashMap;
 
 /**
  * Represents a warehouse that can hold a fixed number of items.
@@ -17,13 +18,14 @@ public final class StorageRack {
 	private final int capacity;
 	private int numberOfItems;
 	private final Optional<StationeryItem>[] compartments; // Array of Optional<StationeryItem>
+	private final HashMap<Identifier, Integer> identifierToCompartmentMap; // New attribute
 
-	/*@
-	@ requires capacity > 0;
-	@ ensures this.capacity == capacity;
-	@ ensures numberOfItems == 0;
+    /*@
+    @ requires capacity > 0;
+    @ ensures this.capacity == capacity;
+    @ ensures numberOfItems == 0;
     @ ensures compartments.length == capacity; // Additional postcondition for array initialization.
-	@*/
+    @*/
 	/**
 	 * Creates a new storage rack with the given capacity.
 	 *
@@ -38,6 +40,7 @@ public final class StorageRack {
 		this.capacity = capacity;
 		numberOfItems = 0;
 		this.compartments = new Optional[capacity];
+		this.identifierToCompartmentMap = new HashMap<>();
 
 		// Initialize each compartment with empty Optional
 		for (int i = 0; i < capacity; i++) {
@@ -45,15 +48,15 @@ public final class StorageRack {
 		}
 	}
 
-	/*@
+    /*@
     @ requires stationeryItem != null;
     @ requires numberOfItems < capacity; // Ensure there is space in the rack
     @*/
 
 	/**
+	 * Adds a stationery item to the storage rack.
 	 *
-	 *
-	 * @param stationeryItem
+	 * @param stationeryItem the item to be added.
 	 */
 	public void addItem(final StationeryItem stationeryItem) {
 		// Find the first available storage space (Optional.empty())
@@ -109,9 +112,9 @@ public final class StorageRack {
 		return Optional.empty(); // TODO delete this line if necessary.
 	}
 
-	/*@
-	@ ensures \result == capacity;
-	@*/
+    /*@
+    @ ensures \result == capacity;
+    @*/
 	/**
 	 * @return The capacity of this warehouse in items.
 	 */
@@ -119,9 +122,9 @@ public final class StorageRack {
 		return capacity;
 	}
 
-	/*@
-	@ ensures \result == numberOfItems;
-	@*/
+    /*@
+    @ ensures \result == numberOfItems;
+    @*/
 	/**
 	 * @return The number of items in this warehouse.
 	 */
