@@ -49,9 +49,9 @@ import java.util.Set;
 	/**
 	 * Processes an incoming order by removing the individual item with the given identifier
 	 * from its compartment in the storage rack and adding it to the order buffer.
-	 *
+	 * <p>
 	 * If the given individual item is not in the warehouse, the order is ignored.
-	 *
+	 * <p>
 	 * All new customers receive a promotional gift.
 	 *
 	 * @param identifier the identifier of the item in the order.
@@ -93,14 +93,11 @@ import java.util.Set;
 	 */
 	private /*@ pure @*/ StationeryItem getBonusItem() {
 
-		switch ((new Random().nextInt(3))) {
-			case 1:
-				return new Compass(new Identifier(), "A marketing bonus item.");
-			case 2:
-				return new Ruler(new Identifier(), "A marketing bonus item.");
-			default:
-				return new Pen(new Identifier(), "A marketing bonus item.");
-		}
+        return switch ((new Random().nextInt(3))) {
+            case 1 -> new Compass(new Identifier(), "A marketing bonus item.");
+            case 2 -> new Ruler(new Identifier(), "A marketing bonus item.");
+            default -> new Pen(new Identifier(), "A marketing bonus item.");
+        };
 	}
 
 	/**

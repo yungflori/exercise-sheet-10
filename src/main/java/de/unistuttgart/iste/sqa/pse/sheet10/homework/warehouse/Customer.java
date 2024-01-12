@@ -18,7 +18,7 @@ public final class Customer {
 	 * @throws IllegalArgumentException If the preconditions are not satisfied.
 	 */
 	public Customer(final String name) {
-		if (name == null || name.length() == 0) {
+		if (name == null || name.isEmpty()) {
 			throw new IllegalArgumentException("Customers may not have null or empty names.");
 		}
 		this.name = name;
