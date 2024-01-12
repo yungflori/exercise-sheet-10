@@ -24,12 +24,20 @@ public final class Company {
 	public Company() {
 		orderBuffer = new Buffer();
 		// TODO: implement exercises 1e and 1i here.
-		itemStorageRack = null; // TODO delete this line if necessary
+		itemStorageRack = new StorageRack(75);
+		//itemStorageRack = null; // TODO delete this line if necessary
 	}
 
 	// TODO add documentation here.
+	/**
+	 * Stores an item in the storageRack.
+	 * @param stationeryItem the item to be stored.
+	 */
 	public void storeInStorageRack(final StationeryItem stationeryItem) {
 		// TODO: implement exercise 1e here.
+		if (itemStorageRack.getNumberOfItems() < itemStorageRack.getCapacity()) {
+			itemStorageRack.addItem(stationeryItem);
+		}
 	}
 
 	// TODO add documentation here.
