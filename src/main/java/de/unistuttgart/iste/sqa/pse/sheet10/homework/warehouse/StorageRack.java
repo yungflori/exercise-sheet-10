@@ -61,7 +61,7 @@ public final class StorageRack {
 	public void addItem(final StationeryItem stationeryItem) {
 		// Find the first available storage space (Optional.empty())
 		for (int i = 0; i < capacity; i++) {
-			if (!compartments[i].isPresent()) {
+			if (compartments[i].isEmpty()) {
 				// Store the item in the compartment
 				compartments[i] = Optional.of(stationeryItem);
 				numberOfItems++;
@@ -110,19 +110,32 @@ public final class StorageRack {
 	 * @param compartmentNumber the compartment number from which to retrieve the item.
 	 * @return an Optional containing the individual item if present, or an empty Optional if the compartment is empty.
 	 */
-	public Optional<StationeryItem> getItem(final int compartmentNumber) {
+	public /*@ pure @*/ Optional<StationeryItem> getItem(final int compartmentNumber) {
 		// Check if the compartmentNumber is valid
 		if (compartmentNumber >= 0 && compartmentNumber < capacity) {
 			return compartments[compartmentNumber];
 		}
 		// If compartmentNumber is invalid (negative or greater than or equal to capacity), return empty Optional
-		return Optional.empty();
+		else return Optional.empty();
 	}
 
 	// TODO add documentation here.
+    /*@
+    @ requires identifier != null;
+    @*/
+	/**
+	 * Returns the compartment number where the item with the given identifier is stored.
+	 *
+	 * @param identifier the identifier of the item.
+	 * @return an Optional containing the compartment number if the item is found,
+	 *         or an empty Optional if the item is not in the warehouse.
+	 */
 	public /*@ pure @*/ Optional<Integer> getCompartmentNumberOf(final Identifier identifier) {
 		// TODO implement exercise 1d here.
-		return Optional.empty(); // TODO delete this line if necessary.
+		if (identifierToCompartmentMap.containsKey(identifier)) {
+			int compartmentNumber = identifierToCompartmentMap.get(identifier);
+			return Optional.of(compartmentNumber);
+		} else return Optional.empty(); // TODO delete this line if necessary.
 	}
 
     /*@
