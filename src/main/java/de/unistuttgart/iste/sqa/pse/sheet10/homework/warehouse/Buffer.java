@@ -1,35 +1,49 @@
 package de.unistuttgart.iste.sqa.pse.sheet10.homework.warehouse;
 
 import de.unistuttgart.iste.sqa.pse.sheet10.homework.warehouse.items.StationeryItem;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * Represents a buffer for temporary storage of items.
  *
- * @author AmoreSchneyinck
+ * @author AmoresSchneyinck
  */
 public final class Buffer {
 
-	// TODO add data structure for exercise 1f here.
+	private final Queue<StationeryItem> itemQueue;
 
-	// TODO add documentation here
+	/**
+	 * Creates a new buffer with a Queue for storing items.
+	 */
 	public Buffer() {
-		// TODO initialize data structure for exercise 1f here.
+		itemQueue = new LinkedList<>();
 	}
 
-	// TODO add documentation here
+	/**
+	 * Adds an item to the buffer.
+	 *
+	 * @param stationeryItem the item to be added to the buffer.
+	 */
 	public void bufferItem(final StationeryItem stationeryItem) {
-		// TODO implement exercise 1g here.
+		itemQueue.offer(stationeryItem); // Enqueue operation
 	}
 
-	// TODO add documentation here
+	/**
+	 * Releases an item from the buffer.
+	 *
+	 * @return the item removed from the buffer, or null if the buffer is empty.
+	 */
 	public StationeryItem releaseItem() {
-		// TODO implement exercise 1g here.
-		return null; // TODO delete this line if necessary.
+		return itemQueue.poll(); // Dequeue operation
 	}
 
-	// TODO add documentation here
+	/**
+	 * Checks if the buffer is empty.
+	 *
+	 * @return true if the buffer is empty, false otherwise.
+	 */
 	public /*@ pure @*/ boolean isEmpty() {
-		// TODO implement exercise 1g here.
-		return false; // TODO delete this line if necessary.
+		return itemQueue.isEmpty();
 	}
 }

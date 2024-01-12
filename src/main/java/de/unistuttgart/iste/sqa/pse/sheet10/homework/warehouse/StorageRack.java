@@ -130,12 +130,11 @@ public final class StorageRack {
 	 * @return an Optional containing the compartment number if the item is found,
 	 *         or an empty Optional if the item is not in the warehouse.
 	 */
-	public /*@ pure @*/ Optional<Integer> getCompartmentNumberOf(final Identifier identifier) {
-		// TODO implement exercise 1d here.
+	public Optional<Integer> getCompartmentNumberOf(final Identifier identifier) {
 		if (identifierToCompartmentMap.containsKey(identifier)) {
 			int compartmentNumber = identifierToCompartmentMap.get(identifier);
 			return Optional.of(compartmentNumber);
-		} else return Optional.empty(); // TODO delete this line if necessary.
+		} else return Optional.empty();
 	}
 
     /*@
